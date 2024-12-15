@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Game
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 125
+  controlID: 18
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 17
+  controlID: 23
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 18
+  controlID: 24
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -431,22 +431,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/StarterAssets/InputSystem
+    - Assets/OccaSoftware/Crosshairs/Art/Textures
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/StarterAssets/InputSystem
+  - Assets/OccaSoftware/Crosshairs/Art/Textures
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\29020\UnityProject\TPS Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 220}
-    m_SelectedIDs: 9ca70000
-    m_LastClickedID: 42908
-    m_ExpandedIDs: 0000000026a5000028a500002aa500002ca500002ea5000030a5000032a5000034a5000036a5000000ca9a3b
+    scrollPos: {x: 0, y: 56}
+    m_SelectedIDs: 742b0a00
+    m_LastClickedID: 666484
+    m_ExpandedIDs: 0000000026a5000028a500002aa500002ca500002ea5000030a5000032a5000034a5000036a500005c2b0a007e2b0a00842b0a00882b0a009c2b0a0000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -562,7 +562,7 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: 274
+    m_CachedPref: 275
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
@@ -604,9 +604,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 10fbffff
+      m_SelectedIDs: 169bffff
+      m_LastClickedID: -25834
+      m_ExpandedIDs: eeccfeff10fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -911,9 +911,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 138.53616, y: 20.457062, z: 139.36053}
+    m_Target: {x: 162.76245, y: -428.29443, z: 807.0138}
     speed: 2
-    m_Value: {x: 138.53616, y: 20.457062, z: 139.36053}
+    m_Value: {x: 162.76245, y: -428.29443, z: 807.0138}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -960,13 +960,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.22063297, y: 0.15347572, z: -0.035166193, w: -0.96261}
+    m_Target: {x: 0.27549565, y: 0.03893892, z: -0.011046347, w: 0.9605443}
     speed: 2
-    m_Value: {x: -0.22062321, y: 0.15346894, z: -0.03516464, w: -0.96256745}
+    m_Value: {x: 0.27547064, y: 0.03893539, z: -0.011045345, w: 0.96045715}
   m_Size:
-    m_Target: 0.51926064
+    m_Target: 2777.0396
     speed: 2
-    m_Value: 0.51926064
+    m_Value: 2777.0396
   m_Ortho:
     m_Target: 0
     speed: 2
