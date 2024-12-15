@@ -9,6 +9,7 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
+/[Uu]ser[Ss]ettings/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
@@ -22,6 +23,7 @@
 # Visual Studio cache directory
 .vs/
 .vscode/
+.idea/
 
 # Gradle cache directory
 .gradle/
@@ -124,3 +126,6 @@ Assets/Plugins/Sirenix/Demos/*
 # Gaia
 Assets/Procedural*Worlds/Gaia/Asset*Samples/*
 Assets/Samples/Terrain*Tools/*
+
+/ProjectSettings/Packages/com.unity.testtools.codecoverage
+/UserSettings
