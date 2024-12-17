@@ -87,6 +87,9 @@ namespace StarterAssets
         private float _rotationVelocity;
         private float _verticalVelocity;
         private float _terminalVelocity = 53.0f;
+        
+        private float _idleRandomPlayTime = 3f;
+        private float _lastIdleRandomPlayTime;
 
         // timeout deltatime
         private float _jumpTimeoutDelta;
@@ -98,6 +101,11 @@ namespace StarterAssets
         private int _animIDJump;
         private int _animIDFreeFall;
         private int _animIDMotionSpeed;
+        private int _animIDRandomIdleTrigger;
+        private int _animIDRandomIdleIdx;
+
+        
+
 
 #if ENABLE_INPUT_SYSTEM 
         private PlayerInput _playerInput;
@@ -152,12 +160,14 @@ namespace StarterAssets
             // reset our timeouts on start
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
+            _lastIdleRandomPlayTime = Time.time;
         }
 
         private void Update()
         {
             _hasAnimator = TryGetComponent(out _animator);
 
+            Idle(); // 闲置随机动作
             JumpAndGravity();
             GroundedCheck();
             Move();
@@ -175,6 +185,8 @@ namespace StarterAssets
             _animIDJump = Animator.StringToHash("Jump");
             _animIDFreeFall = Animator.StringToHash("FreeFall");
             _animIDMotionSpeed = Animator.StringToHash("MotionSpeed");
+            _animIDRandomIdleTrigger = Animator.StringToHash("PlayRandomIdle");
+            _animIDRandomIdleIdx = Animator.StringToHash("RandomIdleIdx");
         }
 
         private void GroundedCheck()
@@ -211,6 +223,37 @@ namespace StarterAssets
             // Cinemachine will follow this target
             CinemachineCameraTarget.transform.rotation = Quaternion.Euler(_cinemachineTargetPitch + CameraAngleOverride,
                 _cinemachineTargetYaw, 0.0f);
+        }
+
+        private void Idle()
+        {
+            if (_hasAnimator)
+            {
+                IdleRandomPlay();
+            }
+        }
+        
+        private void IdleRandomPlay()
+        {
+            if (Time.time - _lastIdleRandomPlayTime >= _idleRandomPlayTime)
+            {
+                // 随机播放一个idle动画
+                int idx = 1;
+                _animator.SetTrigger(_animIDRandomIdleTrigger);
+                _animator.SetInteger(_animIDRandomIdleIdx, idx);
+                ResetIdleRandomPlay();
+            }
+            
+            // 不在播放idle动画且处于静止状态时，重置随机播放时间
+            if (!_animator.GetCurrentAnimatorStateInfo(0).IsName("Idle Walk Run Blend") && Mathf.Abs(_speed) == 0)
+            {
+                ResetIdleRandomPlay(); 
+            }
+        }
+
+        private void ResetIdleRandomPlay()
+        {
+            _lastIdleRandomPlayTime = Time.time;
         }
 
         private void Move()
